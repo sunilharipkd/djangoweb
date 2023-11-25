@@ -35,6 +35,15 @@ _> pipenv shell _
 Using django-admin , create the project <br>
 _> django-admin startproject <projectname> ._ 
 
+**Creation of APP**
+
+> python manage.py startapp <appname> 
+
+Once the app is created then, it could be referenced in the settings.py under the installed apps section
+
+
+
+
 
 To create the webserver , run the command <br>
 > python manage.py runserver 
