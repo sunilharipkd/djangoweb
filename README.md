@@ -39,10 +39,40 @@ _> django-admin startproject <projectname> ._
 
 > python manage.py startapp <appname> 
 
-Once the app is created then, it could be referenced in the settings.py under the installed apps section
+Once the app is created then, it must be referenced in the settings.py under the installed apps section
+
+**Create Migrations**
 
 
+Once the models.py are created based on the requirement inside each app. The migrations could be created. 
+To create a migration . Run 
 
+_> python manage.py makemigrations_
+
+If you want to make any changes in the data within the models, then the makemigrations must be again run. 
+
+Once complete we can run the migrate command
+
+_> python manage.py migrate_
+
+_Note:_ _Add the mysqlite extensions. Go-To Command Pallette -> SQL: Add Database_
+
+You would be able to see a similar screen in the VSCODE explorer section.
+<img width="729" alt="image" src="https://github.com/sunilharipkd/djangoweb/assets/111420932/65b64a65-b4da-476b-937a-8229be8f7d42">
+
+**Undo changes in Database**
+If you want to make a specific change within a migration, you can edit the class contents and then run the migrate .
+But if you want to revert the last migration , then you can run the migrate against a specific migration number. 
+For EX: 
+
+<img width="174" alt="image" src="https://github.com/sunilharipkd/djangoweb/assets/111420932/ac56ac51-3176-4056-b14a-9857b492223b">
+
+I have 4 migration files, and if I want to revert the last changes that has gone in 004 , then we can get this done by 
+> python manage.py migrate storeapp 003
+
+Note: Post this , the code changes need to be reverted. Either use the git versioning to revert changes or do it manually.
+
+**Only by doing this the revert operation is complete. **
 
 
 To create the webserver , run the command <br>
